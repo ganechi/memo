@@ -6,11 +6,15 @@
 import requests
 import json
 ```
+- Requests(PythonのHTTPライブラリ) の使い方
+https://requests-docs-ja.readthedocs.io/en/latest/user/quickstart/
 
 ## GETする
 
 ```python
 get1 = requests.get('<URL>')
+# JSON形式にデコード
+get1.json()
 ```
 
 ## JSON形式 -> 辞書に変換
@@ -20,7 +24,7 @@ get1 = requests.get('<URL>')
 
 ### 辞書を作成
 ```python
-#変数を辞書に入れる格納できる
+# 変数を辞書に入れる格納できる
 x = "Windows"
 y = "Mac"
 num = 3
@@ -136,3 +140,10 @@ mylist = list(mydict.items())
 print(mylist) # [(1, 'Windows'), (2, 'Mac')]
 
 ```
+
+## テスト用
+- スプレッドシートのデータをJSON形式で
+https://qiita.com/takatama/items/7aa1097aac453fff1d53
+- livedoor天気情報
+http://weather.livedoor.com/weather_hacks/webservice
+
