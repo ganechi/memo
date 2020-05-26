@@ -2,7 +2,6 @@
 GETのみ、スプレッドシートを使ってPOST関連も追記したい
 
 ## はじめに必要なimport
-
 ```python
 import requests
 import json
@@ -13,12 +12,18 @@ https://requests-docs-ja.readthedocs.io/en/latest/user/quickstart/
 https://kumanology.com/notes/197/
 
 ## GET、JSON形式(辞書型)に
-
 ```python
 get1 = requests.get('<URL>')
 # JSON形式(辞書)にデコード
 json1 = get1.json()
 print(type(json1)) # <class 'dict'>
+```
+
+JSON形式を見やすく出力
+```python
+import pprint
+~
+pprint.pprint(json1)
 ```
 
 ## 辞書の処理
