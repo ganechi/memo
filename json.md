@@ -147,3 +147,26 @@ https://qiita.com/takatama/items/7aa1097aac453fff1d53
 - livedoor天気情報
 http://weather.livedoor.com/weather_hacks/webservice
 
+### 天気情報の取得
+
+```python
+import requests
+import json
+
+## GET (Livedoorの天気情報)
+city = str(230010) #Nagoya
+get1 = requests.get('http://weather.livedoor.com/forecast/webservice/json/v1?city=' + city)
+
+## JSON形式で取得　※ ()を忘れずに！
+json1 = get1.json()
+
+## キー取得　※ ()を忘れずに！
+print(json1.keys()) # dict_keys(['pinpointLocations', 'link', 'forecasts', 'location', 'publicTime', 'copyright', 'title', 'description'])
+
+## キー取得　※ ''を忘れずに！
+print(json1['location']) # {'city': '名古屋', 'area': '東海', 'prefecture': '愛知県'}
+print(json1['location']['city']) # 名古屋
+
+print(json1['forecasts'][0]) #今日の名古屋の天気のJSONデータ
+print(json1['forecasts'][0]['image']['title']) #今日の名古屋の天気
+```
