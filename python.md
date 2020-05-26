@@ -172,6 +172,20 @@ print(s.lower()) # abcあいうえお
 print(s.upper()) # ABCあいうえお
 ```
 
-指定した文字列
+N文字目までを取り出す
+- スライスを使う
+
+```python
+s = 'abcdefghij'
+print(s[:3]) #abc
+print(s[7:]) #hij
+## 一部置換もできる
+print(s[:3] + 'D' + s[4:]) #abcDefghij
+```
+
+## コマンドライン引数
+
+
+
 
 
