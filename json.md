@@ -89,20 +89,23 @@ print(0 in mydict) # False
 
 ## 辞書に含まれるキーの一覧
 print(mydict.keys()) # dict_keys([1, 2])
-for mykey in mydict.keys(): ## 順に取得できる
+# 順に取得
+for mykey in mydict.keys(): 
     print(mykey) # 1 \\ 2
 
 ## 辞書に含まれる値の一覧
 print(mydict.values()) # dict_values(['Windows', 'Mac'])
-myvalue = list(mydict.values()) ## リストに変換
+# リストに変換
+myvalue = list(mydict.values()) 
 print(myvalue) # ['Windows', 'Mac']
-
 
 ## 辞書に含まれるキーと値の組み合わせ一覧
 print(mydict.items()) # dict_items([(1, 'Windows'), (2, 'Mac')])
-for mykey,myvalue in mydict.items(): ## 順に取得できる
+# 順に取得
+for mykey,myvalue in mydict.items(): 
     print(mykey,myvalue) # 1 Windows \\ 2 Mac
-mylist = list(mydict.items()) ## リストに変換
+# リストに変換
+mylist = list(mydict.items())
 print(mylist) # [(1, 'Windows'), (2, 'Mac')]
 
 ```
