@@ -17,8 +17,10 @@ get1 = requests.get('<URL>')
 
 
 ## 辞書の処理
-```python
 
+### 辞書を作成
+```python
+#変数を辞書に入れる格納できる
 x = "Windows"
 y = "Mac"
 num = 3
@@ -33,7 +35,11 @@ y = "MAC"
 num = 300
 
 print(mydict) # {1: 'Windows', 2: 'Mac', 3: 'Linux'}
+``` 
 
+### キー検索
+
+```python
 ## 辞書で、キーを指定して、それぞれ対応した値を取得
 print(mydict[1]) # Windows
 #print(mydict[0]) # KeyERROR
@@ -45,24 +51,41 @@ print("キー：" + str(key2) + "、値：" + mydict[key2]) # キー：2、値�
 ## 存在しないキーが指定された時、Defaultを返す
 print(mydict.get(1,"NotFound")) # Windows 
 print(mydict.get(0,"NotFound")) # NotFound
+``` 
 
-## 要素の値を更新 or 追加
+### 要素の更新・追加
+
+```python
+## 要素の値を更新
 mydict[3] = "Ubuntu"
 print(mydict) # {1: 'Windows', 2: 'Mac', 3: 'Ubuntu'}
 
+## 要素の値を追加
 mydict[4] = "CentOS"
 print(mydict) # {1: 'Windows', 2: 'Mac', 3: 'Ubuntu', 4: 'CentOS'}
+``` 
 
+### 他の辞書と結合
+
+```python
 ## 他の辞書と結合
 youdict = {4:"Japan",5:"USA"}
 mydict.update(youdict)
 print(mydict) # {1: 'Windows', 2: 'Mac', 3: 'Ubuntu', 4: 'Japan', 5: 'USA'}
 ## 他の辞書側は、そのまま
 print(youdict) # {4: 'Japan', 5: 'USA'}
+``` 
 
+### 辞書の長さ
+
+```python
 ## 辞書の長さ
 print(len(mydict)) # 5
+``` 
 
+### 要素・辞書の削除
+
+```python
 ## 辞書から要素を削除
 del mydict[4] #キー = 4を削除
 #del mydict[0] # keyERROR
@@ -81,7 +104,11 @@ print(mydict) # {1: 'Windows', 2: 'Mac'}
 
 ## 全ての要素を削除する
 print(youdict.clear()) # None
+``` 
 
+### 全検索
+
+```python
 ## 指定のキーが、辞書に含まれているか
 print(1 in mydict) # True
 print(0 in mydict) # False
