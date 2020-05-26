@@ -183,8 +183,7 @@ print(s[:3] + 'D' + s[4:]) #abcDefghij
 ```
 
 ## コマンドライン引数
-
-test.py
+- test.py
 ```python:test.py
 import sys
 args = sys.argv
@@ -192,7 +191,7 @@ print(args)
 print("[1]：" + args[1])
 ```
 
-コマンドライン
+- コマンドライン
 ```:コマンドライン
 $ python test.py a b c
 ['test.py', 'a', 'b', 'c']
