@@ -31,9 +31,16 @@ for i in range(num):
 ## 出力
 
 ```python
-num = "Yeah"
-print("Hello",num) # HelloYeah
-print(num,end='')  # Yeah (改行しない)
+num1 = "Say"
+num2 = "Yeah"
+print(num1,"Hello") # Say Hello (自動で改行/間に半角スペースされる)
+```
+
+オプションについて
+
+```python
+print(num2,end='')  # Yeah (改行しない)
+print(num1,num2,sep='')  # SayYeah (間に空白いれない)
 ```
 
 ## if文
