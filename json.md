@@ -9,6 +9,8 @@ import json
 ```
 - Requests(PythonのHTTPライブラリ) の使い方
 https://requests-docs-ja.readthedocs.io/en/latest/user/quickstart/
+- HTTPメソッドについて
+https://kumanology.com/notes/197/
 
 ## GET、JSON形式(辞書型)に
 
