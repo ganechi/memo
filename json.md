@@ -1,0 +1,14 @@
+# Pythonで、JSON形式を扱う
+
+## はじめに必要なimport
+
+```python
+import requests
+import json
+```
+
+## GETする
+get1 = requests.get('<URL>' + '/start?token=' + <TOKEN>)
+
+## JSON形式 -> 辞書に変換
+
