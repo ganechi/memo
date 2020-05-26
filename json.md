@@ -10,7 +10,7 @@ import json
 ## GETする
 
 ```python
-get1 = requests.get('<URL>' + '/start?token=' + <TOKEN>)
+get1 = requests.get('<URL>')
 ```
 
 ## JSON形式 -> 辞書に変換
