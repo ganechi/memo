@@ -9,19 +9,16 @@ import json
 - Requests(PythonのHTTPライブラリ) の使い方
 https://requests-docs-ja.readthedocs.io/en/latest/user/quickstart/
 
-## GETする
+## GET、JSON形式(辞書型)に
 
 ```python
 get1 = requests.get('<URL>')
-# JSON形式にデコード
-get1.json()
+# JSON形式(辞書)にデコード
+json1 = get1.json()
+print(type(json1)) # <class 'dict'>
 ```
 
-## JSON形式 -> 辞書に変換
-
-
 ## 辞書の処理
-
 ### 辞書を作成
 ```python
 # 変数を辞書に入れる格納できる
