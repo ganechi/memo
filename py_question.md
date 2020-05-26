@@ -79,3 +79,46 @@ us/california/sandiego
 ```
 
 ### 作成プログラム
+```python
+import requests
+import json
+import pprint
+
+# 入力から、出発地・到着地を受け取る（本当はコマンドライン引数）
+start,goal = (x for x in input().split())
+
+now = start
+print(now)
+
+while True:
+    # GET
+    get1 = requests.get('https://pn-c9759a75.herokuapp.com/' + now)
+    #print(get1)
+    json1 = get1.json()
+    #pprint.pprint(json1) # test
+    
+    #配送先のリスト
+    print(list(json1['routes'].keys()))
+    
+    #Defalutへのフラグ
+    flg = 0
+    
+    #goalとの前方一致を調査
+    for route in list(json1['routes'].keys()):
+        #print(route,goal.startswith(route)) #文字列の最初から検索
+        if(goal.startswith(route)):
+            now = json1['routes'][route] #配送先の辞書引き
+            flg=1
+            print(now)
+    
+    #一致がなければ、Defaultへ
+    if(flg==0):
+        now = json1['routes']['default']
+    
+    if(goal == now):
+        print("GOAL!!!")
+        break
+    
+    #初期化
+    json1.clear()
+```
