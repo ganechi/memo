@@ -168,5 +168,5 @@ print(json1['location']) # {'city': '名古屋', 'area': '東海', 'prefecture':
 print(json1['location']['city']) # 名古屋
 
 print(json1['forecasts'][0]) #　{'dateLabel': '今日', 'telop': '雨のち曇', 'date': '2020-05-26', 'temperature': {'min': None, 'max': None}, 'image': {'width': 50, 'url': 'http://weather.livedoor.com/img/icon/20.gif', 'title': '雨のち曇', 'height': 31}}
-print(json1['forecasts'][0]['image']['title']) # 雨のち曇
+print("今日の天気：",json1['forecasts'][0]['image']['title']) # 今日の天気： 雨のち曇
 ```
