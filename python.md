@@ -55,6 +55,12 @@ else:
 for i in range(5):
 ```
 
+範囲で指定 i =1,2,3,4
+
+```python
+for i in range(1,5):
+```
+
 リストで指定
 
 ```python
