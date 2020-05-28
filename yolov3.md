@@ -23,9 +23,9 @@ https://pjreddie.com/media/files/yolov3-tiny.weights
 ### 学習
 学習実行（最初）
 ```
-$ darknet detector train obj.data yolov3-obj-XXX.cfg darknet53.conv.74
+$ darknet detector train /XXX/obj.data /XXX/yolov3-obj-XXX.cfg darknet53.conv.74
 ```
 学習実行（途中から）
 ```
-$ darknet detector train obj.data yolov3-obj-XXX.cfg yolov3-last.weights
+$ darknet detector train /XXX/obj.data /XXX/yolov3-obj-XXX.cfg yolov3-last.weights
 ```
