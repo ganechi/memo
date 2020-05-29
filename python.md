@@ -198,5 +198,27 @@ $ python test.py a b c
 [1]： a
 ```
 
+## ランダム処理
+リスト,タプル,文字列からランダムで要素が１つ選択・取得される
+```python
+import random
+li = [1,3,5,7,9]
+print(random.choice(li)) # 5
+print(random.choice('abcde')) # c  #文字列は、１文字選択
+print(random.choice(range(1,5))) # 2
+```
 
+複数の要素を取得
+```python
+import random
+li = [1,3,5,7,9]
+print(random.sample(l, 3)) # [1, 7, 3]
+print(random.sample('abcde', 3)) # ['a', 'd', 'b']
+## 文字列のリストを結合
+print(''.join(random.sample('abcde', 4))) # dbac
+## 重複あり
+print(random.choices(li,k=3)) # [9, 9, 1]
+## 重複あり、重み付けあり
+print(random.choices(li,k=3,weights=[10,0,0,5,1])) # [1, 7, 1]
+```
 
