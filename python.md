@@ -120,7 +120,7 @@ if time[i] < datetime(2020, 1, 1, 9, 00 ,00):  # 比較もできる
 >「素数とは、1とその数自身以外に正の約数を持たない、1より大きい整数」
 素数の定義から単純に考えると、1とその数自身以外で割り切れないことを確認すれば、素数かどうかを判定できます。以下のような手順になります。
 
->>n を判定したい数とする
+>n を判定したい数とする
 2 から n - 1 までで n を割ってみる
 もしどこかで割り切れたら n は合成数
 最後まで割り切れなかったら n は素数
@@ -182,6 +182,11 @@ print(s[7:]) #hij
 print(s[:3] + 'D' + s[4:]) #abcDefghij
 ```
 
+## リスト処理
+
+区切り文字も含める
+https://lets-hack.tech/programming/languages/python/regex-brackets/
+
 ## コマンドライン引数
 - test.py
 ```python:test.py
@@ -221,5 +226,5 @@ print(random.choices(li,k=3)) # [9, 9, 1]
 ## 重複あり、重み付けあり
 print(random.choices(li,k=3,weights=[10,0,0,5,1])) # [1, 7, 1]
 ```
-### 正規表現URL
+### 正規表現
 https://uxmilk.jp/41416
