@@ -221,4 +221,5 @@ print(random.choices(li,k=3)) # [9, 9, 1]
 ## 重複あり、重み付けあり
 print(random.choices(li,k=3,weights=[10,0,0,5,1])) # [1, 7, 1]
 ```
-
+### 正規表現URL
+https://uxmilk.jp/41416
