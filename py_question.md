@@ -34,6 +34,43 @@ for term in str1_list:
     print(str_bef[0],term,str_aft[0],sep='')
 ```
 
+## 改良プログラム
+```python
+import re
+
+str = input()
+
+# 正規表現で、{,}で切り分ける(区切り文字もリストに含める)
+str_list = re.split('({|})',str)
+#print(str_list)
+
+output = ['']
+flg = "out"
+
+for term in str_list:
+    #print("term:",term)
+    
+    if term == '{':
+        flg="in"
+    elif term == '}':
+        flg="out"
+    else:
+        if flg == "out":
+            for i in range(len(output)):
+                output[i] += term
+        if flg == "in":
+            in_list = term.split(',')
+            tmp = []
+            for i in range(len(output)):
+                for j in range(len(in_list)):
+                    tmp.append(output[i]+in_list[j])
+            output = tmp
+        
+    #print(output)
+        
+for term in output:
+    print(term)
+```
 
 ## Question 2.
 5/30 インターンシップ合同説明会　コーディングテスト解説例題 Q1
