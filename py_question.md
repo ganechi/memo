@@ -51,11 +51,9 @@ for term in str_list:
     # { がきたら、{}内のフラグ
     if term == '{':
         flg="in"
-        
     # } がきたら、{}外のフラグ
     elif term == '}':
         flg="out"
-        
     # {}以外の文字
     else:
         if flg == "out": # {}の外
