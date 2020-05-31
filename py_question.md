@@ -67,9 +67,12 @@ for term in str_list:
             output = tmp
         
     #print(output)
-        
-for term in output:
-    print(term)
+
+if flg=="in" :
+    print("ERROR : {}の指定が不正です")
+else:
+    for term in output:
+        print(term)
 ```
 
 ## Question 2.
