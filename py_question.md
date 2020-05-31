@@ -44,29 +44,30 @@ str = input()
 str_list = re.split('({|})',str)
 #print(str_list)
 
-output = ['']
-flg = "out"
+output = [''] # 結果出力のリスト
+flg = "out" # {}の内外のフラグ
 
 for term in str_list:
-    #print("term:",term)
-    
+    # { がきたら、{}内のフラグ
     if term == '{':
         flg="in"
+        
+    # } がきたら、{}外のフラグ
     elif term == '}':
         flg="out"
+        
+    # {}以外の文字
     else:
-        if flg == "out":
+        if flg == "out": # {}の外
             for i in range(len(output)):
                 output[i] += term
-        if flg == "in":
+        if flg == "in": # {}の中
             in_list = term.split(',')
             tmp = []
             for i in range(len(output)):
                 for j in range(len(in_list)):
                     tmp.append(output[i]+in_list[j])
             output = tmp
-        
-    #print(output)
 
 if flg=="in" :
     print("ERROR : {}の指定が不正です")
