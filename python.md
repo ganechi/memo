@@ -9,6 +9,12 @@
 a,b = (int(x) for x in input().split())
 ```
 
+リストにして入れる場合
+
+```python
+l = [int(x) for x in input().split()]
+```
+
 多重リスト
 
 ```
