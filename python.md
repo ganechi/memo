@@ -13,6 +13,7 @@ a,b = (int(x) for x in input().split())
 
 ```python
 l = [int(x) for x in input().split()]
+l = input().split()
 ```
 
 多重リスト
